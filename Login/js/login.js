@@ -35,7 +35,7 @@ function SignUp() {
   const userEmail = document.getElementById("txtEmail").value;
   const userPassword = document.getElementById("txtPassword").value;
 
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
