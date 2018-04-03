@@ -1,9 +1,46 @@
- const txtEmail = document.getElementById("txtEmail");
- const txtPassword = document.getElementById("txtPassword");
- const btnSignIn = document.getElementById("btnSignIn");
- const btnSignUp = document.getElementById("btnSignUp");
+
+const btnSignIn = document.getElementById("btnSignIn");
+const btnSignUp = document.getElementById("btnSignUp");
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    document.getElementById("User_div").style.display = "initial";
+    document.getElementById("newUser_div").style.display = "none";
+
+  } else {
+    // No user is signed in.
+    document.getElementById("newUser_div").style.display = "initial";
+    document.getElementById("User_div").style.display = "initial";
+
+  }
+});
 
  //Add SignIn event
- btnSignIn.addEventListener("dblclick", function() {
-   window.alert("wee");
- });
+function SignIn() {
+  const userEmail = document.getElementById("txtEmail").value;
+  const userPassword = document.getElementById("txtPassword").value;
+
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).catch(function(error) {
+  // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error: " + errorMessage);
+
+  });
+};
+
+function SignUp() {
+  const userEmail = document.getElementById("txtEmail").value;
+  const userPassword = document.getElementById("txtPassword").value;
+
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+
+  window.alert("Error: " + errorMessage);
+});
+
+}

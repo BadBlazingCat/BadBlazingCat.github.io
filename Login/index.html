@@ -33,11 +33,11 @@
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 				<form class="login100-form validate-form flex-sb flex-w">
-					<span class="login100-form-title p-b-53">
-						Sign In With
+					<span class="login100-form-title p-b-53" id = "User_div_top">
+						Log In or Sign Up
 					</span>
 
-					<a href="#" class="btn-face m-b-20">
+				<!--	<a href="#" class="btn-face m-b-20">
 						<i class="fa fa-facebook-official"></i>
 						Facebook
 					</a>
@@ -45,20 +45,20 @@
 					<a href="#" class="btn-google m-b-20">
 						<img src="images/icons/icon-google.png" alt="GOOGLE">
 						Google
-					</a>
+					</a> -->
 
 					<div class="p-t-31 p-b-9">
-						<span class="txt1" id = "txtEmail">
+						<span class="txt1">
 							Email
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Username is required">
-						<input class="input100" type="text" name="username" >
+						<input class="input100" type="email" name="username" id = "txtEmail" value="">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="p-t-13 p-b-9">
-						<span class="txt1" id = "txtPassword">
+						<span class="txt1">
 							Password
 						</span>
 
@@ -67,18 +67,21 @@
 						</a>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" >
+						<input class="input100" type="password" name="pass" id = "txtPassword"/>
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn" id = "btnSignIn">
+					<div class="container-login100-form-btn m-t-17" id = "User_div">
+						<button class="login100-form-btn" id = "btnSignIn" onclick="SignIn()">
 							Sign In
 						</button>
 					</div>
 
-					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn" id="btnSignUp">
+					<div class="container-login100-form-btn m-t-17" id = "newUser_div">
+						<hr/>
+						<p1> or </p1>
+						<hr/>
+						<button class="login100-form-btn" id="btnSignUp" onclick = "SignUp()">
 							Sign Up
 						</button>
 					</div>
