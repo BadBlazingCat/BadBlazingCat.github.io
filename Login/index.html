@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyA2nGVPs-8pcAFdWNqKKUT49L0c1bhmPMo",
+	    authDomain: "permapent-49d6b.firebaseapp.com",
+	    databaseURL: "https://permapent-49d6b.firebaseio.com",
+	    projectId: "permapent-49d6b",
+	    storageBucket: "permapent-49d6b.appspot.com",
+	    messagingSenderId: "143344470676"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
 	<title>PermaPent Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +46,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-				<form class="login100-form validate-form flex-sb flex-w">
+				<div class="login100-form validate-form flex-sb flex-w">
 					<span class="login100-form-title p-b-53" id = "User_div_top">
 						Log In or Sign Up
 					</span>
@@ -94,27 +108,13 @@
 							Sign up now
 						</a>
 					</div>  -->
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>
 
 
 	<div id="dropDownSelect1"></div>
-
-	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-	<script>
-	  // Initialize Firebase
-	  var config = {
-	    apiKey: "AIzaSyA2nGVPs-8pcAFdWNqKKUT49L0c1bhmPMo",
-	    authDomain: "permapent-49d6b.firebaseapp.com",
-	    databaseURL: "https://permapent-49d6b.firebaseio.com",
-	    projectId: "permapent-49d6b",
-	    storageBucket: "permapent-49d6b.appspot.com",
-	    messagingSenderId: "143344470676"
-	  };
-	  firebase.initializeApp(config);
-	</script>
 
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>

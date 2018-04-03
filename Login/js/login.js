@@ -14,6 +14,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("User_div").style.display = "initial";
 
   }
+  app.user = user;
+  console.log("user", user);
 });
 
  //Add SignIn event
