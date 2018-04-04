@@ -15,10 +15,14 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   }
   app.user = user;
-  public ID = user.getIdToken();
+//Used to verify if user is signed in
+  function Continue(){
+    if (app.user != null){
+      console.log("true");
+      return true;
+    }
+  }
 });
-
-
 
  //Add SignIn event
 function SignIn() {
@@ -31,13 +35,9 @@ function SignIn() {
     var errorMessage = error.message;
 
     window.alert("Error: " + errorMessage);
-    break;
+
   });
-
-
 };
-
-$(#btnSignUp).click(function(window.alert("djbf")));
 
 function SignUp() {
   const userEmail = document.getElementById("txtEmail").value;
@@ -50,5 +50,14 @@ function SignUp() {
 
   window.alert("Error: " + errorMessage);
 });
-
 }
+
+
+Continue();
+var verifySignIn = Continue();
+
+//Create Refrenceces
+const dbRefInventory = firbase.database().ref().child("inventory");
+
+//Sync object changes
+dbRefInventory.on("value", snap => console.log(snap.val()));
