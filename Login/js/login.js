@@ -16,7 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
   app.user = user;
 //Used to verify if user is signed in
-  function Continue(){
+  export function Continue(){
     if (app.user != null){
       console.log("true");
       return true;
@@ -49,15 +49,10 @@ function SignUp() {
   var errorMessage = error.message;
 
   window.alert("Error: " + errorMessage);
+  break;
 });
-}
-
-
-Continue();
-var verifySignIn = Continue();
-
 //Create Refrenceces
-const dbRefInventory = firbase.database().ref().child("inventory");
-
+const dbRefUser = firbase.database().ref().child("Users").child(userEmail);
 //Sync object changes
 dbRefInventory.on("value", snap => console.log(snap.val()));
+}
