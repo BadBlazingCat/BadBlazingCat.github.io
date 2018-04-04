@@ -15,7 +15,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   }
   app.user = user;
-  public var ID = user.getIdToken();
+  public ID = user.getIdToken();
 });
 
  //Add SignIn event
@@ -29,7 +29,6 @@ function SignIn() {
     var errorMessage = error.message;
 
     window.alert("Error: " + errorMessage);
-    break;
   });
   document.getElementById("btnSignIn").href = "testGame.html";
 };
@@ -44,7 +43,6 @@ function SignUp() {
   var errorMessage = error.message;
 
   window.alert("Error: " + errorMessage);
-  break;
 });
 
 }
