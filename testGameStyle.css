@@ -1,0 +1,13 @@
+.buttons {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    margin: 1%;
+    cursor: pointer;
+    width: 55%;
+}
