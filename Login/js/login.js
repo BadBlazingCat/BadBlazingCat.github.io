@@ -16,7 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
   app.user = user;
 //Used to verify if user is signed in
-  export function Continue(){
+  function Continue(){
     if (app.user != null){
       console.log("true");
       return true;
