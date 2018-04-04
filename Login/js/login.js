@@ -28,8 +28,9 @@ function SignIn() {
     var errorMessage = error.message;
 
     window.alert("Error: " + errorMessage);
-
+    break;
   });
+  document.getElementById("btnSignIn").href = "testGame.html";
 };
 
 function SignUp() {
@@ -44,6 +45,7 @@ function SignUp() {
   window.alert("Error: " + errorMessage);
   break;
 });
+
 //Create Refrenceces
 const dbRefUser = firebase.database().ref().child("Users").child(String(userEmail));
 //Sync object changes
