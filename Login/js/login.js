@@ -18,6 +18,8 @@ firebase.auth().onAuthStateChanged(function(user) {
   public ID = user.getIdToken();
 });
 
+
+
  //Add SignIn event
 function SignIn() {
   const userEmail = document.getElementById("txtEmail").value;
@@ -29,9 +31,13 @@ function SignIn() {
     var errorMessage = error.message;
 
     window.alert("Error: " + errorMessage);
+    break;
   });
-  document.getElementById("btnSignIn").href = "testGame.html";
+
+
 };
+
+$(#btnSignUp).click(function(window.alert("djbf")));
 
 function SignUp() {
   const userEmail = document.getElementById("txtEmail").value;
