@@ -15,7 +15,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   }
   app.user = user;
-
+//Used to verify if user is signed in
   function Continue(){
     if (app.user != null){
       console.log("true");
@@ -52,13 +52,6 @@ function SignUp() {
 });
 }
 
-//Used to verify if user is signed in
-function Continue(){
-  if (app.user){
-    console.log("true");
-    return true;
-  }
-}
 
 Continue();
 var verifySignIn = Continue();
