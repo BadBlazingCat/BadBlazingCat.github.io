@@ -44,5 +44,15 @@ function SignUp() {
 
   window.alert("Error: " + errorMessage);
 });
-
 }
+
+//Used to verify if user is signed in
+function Continue(){
+  if (app.user){
+    console.log("true");
+    return true;
+  }
+}
+
+Continue();
+var verifySignIn = Continue();
