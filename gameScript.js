@@ -1,3 +1,5 @@
+
+
 var canvas = document.getElementById("canvas");
 
 canvas.width = window.innerWidth * 2.3;

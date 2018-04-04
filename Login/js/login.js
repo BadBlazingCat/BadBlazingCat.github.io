@@ -52,7 +52,7 @@ function SignUp() {
   break;
 });
 //Create Refrenceces
-const dbRefUser = firbase.database().ref().child("Users").child(userEmail);
+const dbRefUser = firebase.database().ref().child("Users").child(userEmail);
 //Sync object changes
 dbRefInventory.on("value", snap => console.log(snap.val()));
 }
