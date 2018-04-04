@@ -15,7 +15,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 
   }
   app.user = user;
-  console.log("user", user);
+
+  function Continue(){
+    if (app.user != null){
+      console.log("true");
+      return true;
+    }
+  }
 });
 
  //Add SignIn event
@@ -56,3 +62,9 @@ function Continue(){
 
 Continue();
 var verifySignIn = Continue();
+
+//Create Refrenceces
+const dbRefInventory = firbase.database().ref().child("inventory");
+
+//Sync object changes
+dbRefInventory.on("value", snap => console.log(snap.val()));
