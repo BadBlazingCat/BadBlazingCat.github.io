@@ -46,13 +46,5 @@ function SignUp() {
   window.alert("Error: " + errorMessage);
   break;
 });
-var userButton = document.getElementById("userButton");
-//Create Refrenceces
-const dbRefUser = firebase.database().ref().child("Users").child(ID);
-//Sync object changes
-dbRefUser.on("child_added", snap => {
-  var li = document.createElement("button");
-  li.innerText = snap.value();
-  userButton.appendChild(li);
-});
+
 }
